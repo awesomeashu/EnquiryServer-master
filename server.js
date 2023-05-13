@@ -10,6 +10,7 @@ const jwt=require('jsonwebtoken');
 const bodyparser=require('body-parser');
 const saltrounds=10;
 const app=express();
+app.use(cors());
 
 app.use(bodyparser.json({limit:'50mb'}));
 app.use(bodyparser.urlencoded({limit:'50mb',extended: true}));
@@ -28,7 +29,7 @@ const userscm= new mongoose.Schema({});
 app.listen(2000);
 
 // CORS //////
-const whitelist=["http://localhost:3000","http://localhost:3000/main"];
+const whitelist=["http://frontend-service:3000","http://frontend-service:3000/main"];
 const corsoptions ={
     origin: function (origin, callback)
     {
