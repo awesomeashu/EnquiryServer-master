@@ -47,7 +47,7 @@ app.listen(2000);
 
 //paths..........
 const userRouter =express.Router();
-app.use('/enquiry', userRouter);
+app.use('/', userRouter);
 
 userRouter
 .route('/register')
