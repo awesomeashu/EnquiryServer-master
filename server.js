@@ -29,20 +29,20 @@ const userscm= new mongoose.Schema({});
 app.listen(2000);
 
 // CORS //////
-const whitelist=["http://frontend-service:3000","http://frontend-service:3000/main"];
-const corsoptions ={
-    origin: function (origin, callback)
-    {
-        if(!origin || whitelist.indexOf(origin)!=-1){
-            callback(null,true);
-        }
-        else{
-            callback(new Error("Server access denied due to CORS!"))
-        }
-    },
-    credentials: true
-}
-app.use(cors(corsoptions));
+//const whitelist=["http://frontend-service:3000","http://frontend-service:3000/main"];
+//const corsoptions ={
+//origin: function (origin, callback)
+   // {
+     //   if(!origin || whitelist.indexOf(origin)!=-1){
+       //     callback(null,true);
+        //}
+        //else{
+          //  callback(new Error("Server access denied due to CORS!"))
+        //}
+    //},
+    //credentials: true
+//}
+//app.use(cors(corsoptions));
 /// CORS ///////
 
 //paths..........
