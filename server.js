@@ -19,9 +19,9 @@ app.use(bodyparser.urlencoded({limit:'50mb',extended: true}));
 // Connecting to the mongo database.................
 
 const mongoose= require('mongoose');
-mongoose.connect('mongodb+srv://ashutosh024:aventador123@cluster0.fj7cclv.mongodb.net/test?retryWrites=true&w=majority');
-console.log('DataBase Connected:');
-
+mongoose.connect('mongodb+srv://ashutosh024:aventador123@cluster0.fj7cclv.mongodb.net/test?retryWrites=true&w=majority')
+.then(() => console.log( 'Database Connected' ))
+.catch(err => console.log( err ));
 const userscm= new mongoose.Schema({});
 
 // Mongo database Connected...............
